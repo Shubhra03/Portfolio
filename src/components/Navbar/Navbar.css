@@ -1,132 +1,156 @@
-/* Navbar Styles */
 .navbar {
-    max-width: 100rem;
-    height: 5 rem;
-    width: 100%;
-    margin: 20px 20px;
-    margin-right: 40px;
-    padding: 1rem 4rem;
-   
-  
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: rgb(23, 33, 51);
-    position: sticky;
-    top: 0;
-
-    z-index: 3;
-    /* border-bottom: 0.2px solid rgb(210, 221, 236,0.3); */
-    /* box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); */
-  }
-  .desktopMenu {
-    padding-left: 40%;
-}
-  .desktopMenuItem{
-    margin: 1rem;
-    cursor: pointer;
-  
-  }
-  .desktopMenuItem:hover{
-   color: aqua;
-   padding-bottom: 0.5rem;
-   border-bottom: 3px solid aqua;
-  }
-  .logo {
-    object-fit: cover;
-    height: 50px;
-    width: auto;
-    animation: slideIn 0.5s ease forwards; /* Apply animation to the first item */
-    animation-delay: 0.1s;
-    
-  }
-  .desktopMenuBtn{
-    color: aqua;
-    border-color: aqua;
-    padding: 10px 30px;
-    border-radius: 10px;
-    /* animation: fadeIn 0.10s ease 1s forwards; */
- 
-  }
-  .desktopMenuBtn:hover{
-   background-color: rgba(131, 240, 240, 0.1);
-  }
-
-  @media screen and (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-    }
-
-    .desktopMenu {
-        margin-top: 1rem;
-        text-align: center;
-    }
-
-    .desktopMenuItem {
-        margin: 0.5rem;
-        padding: 0.5rem 1rem;
-        border-bottom: none;
-        opacity: 1;
-        color: aqua;
-    }
-
-    .desktopMenuItem:hover {
-        border-bottom: none;
-    }
-
-    .desktopMenuBtn {
-        margin-top: 1rem;
-    }
-}
-  
-  /* Navbar.css */
-/* ... (other styles) ... */
-
-/* Define animation for menu items */
-@keyframes slideIn {
-  0% {
-      opacity: 0;
-      transform: translateY(-10px);
-  }
-  100% {
-      opacity: 1;
-      transform: translateY(0);
-  }
+  background:  rgb(23, 33, 51);
+  color: rgb(210, 213, 237);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
 }
 
-.desktopMenuItem {
-  margin: 1rem;
+.nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  max-width: 1500px;
+  position: relative;
+}
+
+.nav-logo {
+  color: aqua;
+  align-items: center;
+  margin-left: 20px;
   cursor: pointer;
-  opacity: 0; /* Start with opacity 0 */
+  text-decoration: none;
+  font-size: 2rem;
+  flex-grow: 1;
+
+  display: flex;
+  align-items: center;
+  justify-items: center;
 }
 
-.desktopMenuItem:nth-child(1) {
-  animation: slideIn 0.6s ease forwards; /* Apply animation to the first item */
-  animation-delay: 0.2s; /* Delay for the first item */
+.nav-logo .icon {
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  margin-left: 16px;
 }
 
-.desktopMenuItem:nth-child(2) {
-  animation: slideIn 0.6s ease forwards; /* Apply animation to the second item */
-  animation-delay: 0.3s; /* Delay for the second item */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin-right: 2rem;
 }
 
-.desktopMenuItem:nth-child(3) {
-  animation: slideIn 0.6s ease forwards; /* Apply animation to the third item */
-  animation-delay: 0.4s; /* Delay for the third item */
+.nav-links {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  border-bottom: 3px solid transparent;
+}
+/* .fa-code {
+  margin-left: 1rem;
+} */
+
+.nav-item {
+  line-height: 40px;
+  margin-right: 1rem;
 }
 
-.desktopMenuItem:nth-child(4) {
-  animation: slideIn 0.6s ease forwards; /* Apply animation to the fourth item */
-  animation-delay: 0.5s; /* Delay for the fourth item */
+.nav-item:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background: transparent;
+  transition: width 0.7s ease, background-color 0.5s ease;
 }
 
-.desktopMenuItem:nth-child(5) {
-  animation: slideIn 0.6s ease forwards; /* Apply animation to the fifth item */
-  animation-delay: 0.6s; /* Delay for the fifth item */
+.nav-item:hover:after {
+  width: 100%;
+  background: aqua
 }
-.desktopMenuItem:nth-child(6) {
-  animation: slideIn 0.6s ease forwards; /* Apply animation to the fifth item */
-  animation-delay: 0.7s; /* Delay for the fifth item */
+
+.nav-item .active {
+  color: aqua;
+  /* border: 1px solid aqua; */
+}
+
+.nav-icon {
+  display: none;
+  color: aqua;
+}
+
+.nav-icon .icon {
+  object-fit: cover;
+  height: 50px;
+  width: auto;
+}
+
+@media screen and (max-width: 960px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1pxsolid #fff;
+    position: absolute;
+    top: 80px;
+    left: -110%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background:  rgb(23, 33, 51);
+    color: rgb(210, 213, 237);
+    left: 0px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+  .nav-item .active {
+    color:aqua;
+    border: none;
+  }
+  .nav-links {
+    padding: 1.5rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-logo .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .nav-icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-100%, -50%);
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    color:aqua;
+  }
+}
+.desktopMenuBtn{
+  color: aqua;
+  border-color: aqua;
+  padding: 10px 30px;
+  border-radius: 10px;
+  /* animation: fadeIn 0.10s ease 1s forwards; */
+
+}
+.desktopMenuBtn:hover{
+ background-color: rgba(131, 240, 240, 0.1);
 }

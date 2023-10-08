@@ -12,9 +12,9 @@ const About = () => {
         <span className='introName'>Shubhra Jyoti Sahoo</span><br/>
         <span className="introText">I'm a Website devloper.</span>
 
-        <p className="introPara">I am a tech enthusiast and web developer, constantly exploring new technologies and pushing the boundaries of what's possible . <a href="https://github.com/Shubhra03/" className='learn' href='https://github.com/shubhra03'>Learn More</a></p>
+        <p className="introPara">I am a tech enthusiast, competitive programmer and web developer, constantly exploring new technologies and pushing the boundaries of what's possible . <a href="https://github.com/Shubhra03/" className='learn' href='https://github.com/shubhra03'>Learn More</a></p>
         <a
-  href="https://drive.google.com/file/d/1PQ6KWEZ2elDJRWHEdxjvaaBkeRhWrFi6/view?usp=drive_link"
+  href="https://drive.google.com/file/d/1g42yPD9OEK_3EqRsDwod4G-_fNIEu8-s/view?usp=drive_link"
   target="_blank"
   rel="noopener noreferrer"
   
@@ -27,4 +27,4 @@ const About = () => {
   )
 }
 
-export default About
+export default About;

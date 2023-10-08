@@ -18,4 +18,10 @@
   .social-icons a:hover {
     color: aqua;
   }
-  
+  .find{
+    padding: 2%;
+  }
+  .free{
+    padding-bottom: 2%;
+    font-size: larger;
+  }

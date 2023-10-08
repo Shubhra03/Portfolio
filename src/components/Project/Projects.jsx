@@ -104,7 +104,7 @@ export default function Projects() {
       <section id="project">
       <div className={classes.box} id='projects'>
         {/* <span className={classes.head}>MY WORK</span> */}
-        <h1 className='intro'>Projects</h1><br/>
+        {/* <h1 className='intro'>Projects</h1><br/> */}
         <ul className={classes.cards}>
           {cardItem.map((item) => {
             return getProjectCard(item);

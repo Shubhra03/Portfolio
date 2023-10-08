@@ -6,7 +6,7 @@
     overflow: hidden;
     position: relative;
     display: flex;
-    
+    padding-top: 5%;
     flex-direction: column;
     justify-content: center;
     text-align: left;
@@ -63,14 +63,86 @@
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-bottom: 100px;
 }
 
 .btn:hover {
     background-color: rgb(183, 203, 209,0.1);
 }
 
+
+
 @media screen and (max-width: 768px) {
+    #intro {
+        height: 100vh;
+        max-width: 120rem;
+        margin: 0;
+        /* padding: 2rem; */
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+    }
+    
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+    }
+    
     .introContent {
+        width: 100%;
         font-size: 2rem;
+        font-weight: 700;
+    }
+    
+    .hello {
+        font-size: 1.75rem;
+        font-weight: 100;
+    }
+    
+    .introName {
+        color: aqua;
+    }
+    
+    .introText {
+        font-size: large;
+        font-weight: 700;
+    }
+    
+    .introPara {
+        font-size: medium;
+        font-weight: 200;
+    }
+    
+    .learn {
+        color: aqua;
+        font-size: large;
+        font-weight: 200;
+    }
+    
+    .btn {
+        margin-top: 1rem;
+        /* padding: 0.5rem 1rem; */
+        font-size: 1rem;
+        color: aqua;
+        border-color: aqua;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        /* padding-bottom: ; */
+        margin-bottom: 100px;
+    }
+    
+    .btn:hover {
+        background-color: rgb(183, 203, 209,0.1);
     }
 }

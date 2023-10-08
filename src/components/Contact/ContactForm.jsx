@@ -9,6 +9,8 @@ function ContactForm() {
   return(
     <section id="contact">
       <div className="social-icons">
+        <h1 className='find'>FIND ME ON</h1>
+        <p className='free'>Feel Free to connect with me</p>
       <a href="mailto:shubhrajyotisahoo03@example.com">
           <FontAwesomeIcon icon={faEnvelope} size="2x" />
           </a>
